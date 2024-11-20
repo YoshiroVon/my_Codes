@@ -11,29 +11,21 @@ public class vending_machine
         int snack = sc.nextInt();
         double price = 0;
         switch (snack) {
-            case 1:
-                price = 1.50;
-                break;
-            case 2:
-                price = 1.00;
-                break;
-            case 3:
-                price = 0.75;
-                break;
-            case 4:
-                price =1.25;
-                break;
-            default:
-            System.out.print("Invalid Selection");
-            System.exit(0);
-                break;
+            case 1 -> price = 1.50;
+            case 2 -> price = 1.00;
+            case 3 -> price = 0.75;
+            case 4 -> price = 1.25;
+            default -> {
+                System.out.println("Invalid selection. Please try again.");
+                return;
+            }
         }
         System.out.println("Insert Money: ");
         double bill = sc.nextDouble();
         if (bill >= price ) {
             double change = bill - price;
             if (change > 0){
-            System.out.println("Transaction Successfully. Change: $" +change);
+            System.out.println("Transaction Successful. Change: $" +change);
             }
             else {
             System.out.println("Transaction Successful");
@@ -42,7 +34,7 @@ public class vending_machine
         else {
             double shortw = price - bill;
             System.out.println("Transaction Failed \n" +
-                                "You are short of $ " +shortw);
+                                "You are short of $" +shortw);
         }
     }
 }
