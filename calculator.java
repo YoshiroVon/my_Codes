@@ -11,32 +11,39 @@ public class calculator
         System.out.println("Input Operator: ");
         char operator = sc.next().charAt(0);
         double result = 0;
-        switch (operator =  '+')
+        switch (operator)
         {
             case '+':
             {
-                System.out.println(result = i + o);
+            result = i + o;
                 break;    
             }
             case '-':
             {
-                System.out.println(result = i - o);
+                result = i - o;
                 break;
             }
             case '*':
             {
-                System.out.println(result = i * o);
+            result = i * o;
                 break;
             }
             case '/':
+            if (o != 0)
             {
-                System.out.println(result = i / o);
-                break;
+                result = i / o;
             }
+            else
+            {
+                System.out.println("Division by zero is not allowed");
+                return;
+            }
+            break;
             default:
             {
                 System.out.println("Invalid input");
             }
         } 
+        System.out.println(result);
     }
 }
