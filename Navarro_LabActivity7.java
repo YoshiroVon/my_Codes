@@ -10,7 +10,7 @@ public class Navarro_LabActivity7
         for (int i = 1; i <= input; i++) {
             result = i * i;
 
-            System.out.printf("%d⌃%d=%d%n",i ,i ,result);
+            System.out.printf("%d⌃2=%d%n",i ,result);
         }
         
     }
