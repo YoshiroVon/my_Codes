@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Navarro_Activity {
+public class Navarro_523_Activity6_6 {
 
     /**
      * @param args the command line arguments
